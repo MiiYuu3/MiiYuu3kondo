@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: "DotGothic16";
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+a { text-decoration: none;}
+a:link, a:visited{ color: rgb(252,218,13); }
+a:hover {
+  color: rgba(252, 218, 13, 0.5);
+}
+a:active { color: yellow; }
+
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(111, 75, 62, 1);
+  position: fixed;
+  top:0;
+  z-index: 10;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.container {
+  width: 1400px;
+  padding: 0 15px;
+  margin:  auto;
+}
+
+.main {
+  background-color: #e3e3e3;
+  top: 0;
+  height: 800px;
+  font-size: 20px;
+}
+
+.main h1 {
+  font-size: 30px;
+  color: #535a96;
+  animation-name: mainh1Anime;
+animation-duration:3s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+@keyframes mainh1Anime{
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.ue {
+  padding: 100px;
+}
+
+.icon {
+  float: left;
+animation-name: iconAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+perspective-origin: left center;
+opacity:0;
+}
+@keyframes iconAnime{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+  opacity: 0;
+  }
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+
+.hanbai {
+  text-align: center;
+  padding-left: 450px;
+}
+
+.hanbai a {
+  text-shadow: 1px 1px 1px black;
+}
+
+.bunchiyo {
+  float: right;
+  padding-right: 400px;
+animation-name: bunchiyoAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+perspective-origin: right center;
+opacity:0;
+}
+@keyframes bunchiyoAnime{
+  from {
+   transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+  opacity: 0;
+  }
+  to {
+  transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+  opacity: 1;
+  }
+}
+
+.gazou p {
+  font-size: 17px;
+  text-align: center;
+  background-color: grey;
+  color: white;
+  max-width: 300px;
+animation-name: gazoupAnime;/*アニメーションの定義名*/
+animation-duration:1s;/*アニメーション変化時間 ※デフォルト*/
+animation-fill-mode:forwards;/*アニメーションの開始と終了時の状態を指定*/
+opacity:0;
+}
+@keyframes gazoupAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+.change-time05{
+  animation-duration: 0.5s;
+}
+
+
+footer {
+  height: 76px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
